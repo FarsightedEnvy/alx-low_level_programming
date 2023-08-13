@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - program entry point
  * Return: each time 0 (success)
  */
 
