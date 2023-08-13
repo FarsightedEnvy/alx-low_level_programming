@@ -5,15 +5,15 @@
  * Return: each time 0 (success)
  */
 
-int main()
+int main(void)
 {
-	char c;
+	char k;
 
-	c = 'a';
+	k = 'a';
 	while
-		(c <= 'z') {
-			putchar(c);
-			c++;
+		(k <= 'z') {
+			putchar(k);
+			k++;
 		}
 	putchar('\n');
 	return (0);
