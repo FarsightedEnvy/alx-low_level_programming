@@ -2,7 +2,7 @@
 
 /**
  * main - program entry point
- * Retun: each time 0 (success)
+ * Return: each time 0 (success)
  */
 
 int main(void)
@@ -13,12 +13,12 @@ int main(void)
 
 	k = 'a';
 	s = 0;
-	while 
+	while
 		(s < 10) {
 			putchar(s + '0');
 			s++;
 		}
-	while 
+	while
 		(k <= 'f') {
 			putchar(k);
 			k++;
