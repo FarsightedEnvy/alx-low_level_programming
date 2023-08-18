@@ -7,16 +7,16 @@
 
 void print_number(int n)
 {
-	unsighted int k = n;
+	unsighted int num = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		k = -k;
+		num = -num;
 	}
 
-	if ((k / 10) > 0)
-		print_number(k / 10);
+	if ((num / 10) > 0)
+		print_number(num / 10);
 
-	_putchar((k % 10) + '0');
+	_putchar((num % 10) + '0');
 }
