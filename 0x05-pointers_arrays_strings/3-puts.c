@@ -6,7 +6,7 @@
  * @str: print string
  */
 
-void _puts(chat *str)
+void _puts(char *str)
 {
 	while (*str != '\0')
 	{
