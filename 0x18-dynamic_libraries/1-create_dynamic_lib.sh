@@ -10,8 +10,10 @@ for file in *.c; do
 done >> main.h
 echo -e "\n#endif /* MAIN_H */" >> main.h
 
-# Compile main.h and libdynamic.so
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -c -fPIC main.h
+# Compile main.h to avoid "expected ‘{’ at end of input" error
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -c -fPIC main.h -o main.o
+
+# Compile main.o and libdynamic.so
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -shared -fPIC -o libdynamic.so *.o
 
 # Cleanup: remove temporary files
