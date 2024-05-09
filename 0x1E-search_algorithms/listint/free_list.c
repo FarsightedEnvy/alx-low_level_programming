@@ -1,18 +1,19 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "../search_algos.h"
 
 /**
- * print_list - prints the content of a listint_t
+ * free_list - deallocates a singly linked list
  *
- * @list: pointer to the head of the list
+ * @list: pointer to the linked list to be freed
  */
-void print_list(const listint_t *list)
+void free_list(listint_t *list)
 {
-	printf("List :\n");
-	while (list)
+	listint_t *node;
+
+	if (list)
 	{
-		printf("Index[%lu] = [%d]\n", list->index, list->n);
-		list = list->next;
+		node = list->next;
+		free(list);
+		free_list(node);
 	}
-	printf("\n");
 }
